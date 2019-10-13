@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<title>Simple_calculator</title>
+<meta charset="utf-8"/>
+</head>
+
+<body>    
+	<div align="center">
+		<br><input type="text" size="10" id="fnumber"></br>
+		<br><input type="text" size="10" id="snumber"></br>
+		
+		<br>	
+			<button onclick="action('add')">+</button>
+			<button onclick="action('sub')">-</button>
+			<button onclick="action('mul')">*</button>
+			<button onclick="action('div')">/</button>
+			<button onclick="action('mod')">%</button>
+			
+		</br>
+		<br><input type="text" id='result' readonly></br>
+    </div>  
+		
+
+
+<script>
+
+	function action(a)
+	{
+
+		n1=parseInt(document.getElementById('fnumber').value);
+		n2=parseInt(document.getElementById('snumber').value);
+		c=a;
+		 
+		if(c=='add')
+		{
+		 	r=n1+n2;
+		}
+
+		if(c=='sub')
+		{
+		 	r=n1-n2;
+		}
+
+		if(c=='mul')
+		{
+		 	r=n1*n2;
+		}
+
+		if(c=='div')
+		{
+		 	if(n2==0)
+		 	{
+		 		alert("Ο αριθμος που βαλατε δεν μπορει να διαιρεθει με το 0");
+		 	}
+		 	r=n1/n2;
+		}
+
+		if(c=='mod')
+		{
+		 	r=n1%n2;
+		}
+
+		 document.getElementById('result').value=r;
+		 
+		 
+	}
+/*
+		function action(a)
+		{
+
+		n1=parseInt(document.getElementById('fnumber').value);
+		n2=parseInt(document.getElementById('snumber').value);
+		
+		c=a;
+		switch(c)
+		{
+			case 'add':
+				r=n1+n2;
+				break;
+			case 'sub':
+				r=n1-n2;
+				break;
+			case 'mul':
+				r=n1*n2;
+				break;
+			case 'div':
+				if(n2==0)
+		 		{
+		 			alert("Ο αριθμος που βαλατε δεν μπορει να διαιρεθει με το 0");
+		 		} 
+				r=n1/n2;
+				break;
+			case 'mod':
+				r=n1%n2;
+				break;
+			default:
+				break;
+			
+		}
+
+
+		document.getElementById('result').value=r;
+		}
+*/
+	</script>	
+</body>
+</html>
