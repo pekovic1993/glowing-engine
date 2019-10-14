@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<title>Guess Game</title>
+<meta charset="utf-8"/>
+</head>
+
+<body>    
+	<div align="center">
+		<br><input type="text" size="10" id="number">
+		<button onclick="action('compare')">guess!!</button></br>
+		<button onclick="action2('p')">Play again!!</button></br>
+
+	</div>  
+		
+<script>
+	 	var c = Math.floor(Math.random() * 5);
+		document.write(c);
+
+
+	function action(a)
+	{
+
+		n1=parseInt(document.getElementById('number').value);
+		 
+		if(c==n1)
+		{
+		 	alert("you win");
+
+		}
+
+		else if(c<n1)
+		{
+		 	alert("too high");
+		}
+
+		else 
+		{
+		 	alert("too low");
+		}
+
+		
+
+	function action2(r)
+	{
+		var c = Math.floor(Math.random() * 5);
+		document.write(c);
+	}	
+		 
+		 
+	}
+
+	</script>	
+</body>
+</html>
